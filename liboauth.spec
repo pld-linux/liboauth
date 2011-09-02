@@ -7,10 +7,9 @@ Group:		Libraries
 URL:		http://liboauth.sourceforge.net/
 Source0:	http://liboauth.sourceforge.net/pool/%{name}-%{version}.tar.gz
 # Source0-md5:	973ded7a1af348c5bfe4e3b6b7e47bd3
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 BuildRequires:	curl-devel
 BuildRequires:	nss-devel
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 liboauth is a collection of POSIX-c functions implementing the OAuth
@@ -20,19 +19,18 @@ high-level functionality to sign requests or verify OAuth signatures
 as well as perform HTTP requests.
 
 
-%package        devel
-Summary:	Development files for %{name}
+%package devel
+Summary:	Development files for liboauth
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description    devel
-The %{name}-devel package contains libraries and header files for
-developing applications that use %{name}.
+This package contains libraries and header files for developing
+applications that use liboauth.
 
 
 %prep
 %setup -q
-
 
 %build
 %configure \
@@ -40,24 +38,19 @@ developing applications that use %{name}.
 	--enable-nss
 %{__make}
 
-
 %install
 rm -rf $RPM_BUILD_ROOT
-
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 find $RPM_BUILD_ROOT -name '*.la' -exec rm -f {} ';'
 
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 
-%post -p /sbin/ldconfig
-
-%postun -p /sbin/ldconfig
-
+%post	-p /sbin/ldconfig
+%postun	-p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
