@@ -1,7 +1,7 @@
 Summary:	OAuth library functions
 Name:		liboauth
 Version:	0.9.4
-Release:	1
+Release:	2
 License:	MIT
 Group:		Libraries
 URL:		http://liboauth.sourceforge.net/
@@ -23,6 +23,7 @@ as well as perform HTTP requests.
 Summary:	Development files for liboauth
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	curl-devel
 
 %description    devel
 This package contains libraries and header files for developing
