@@ -1,12 +1,12 @@
 Summary:	OAuth library functions
 Name:		liboauth
-Version:	0.9.4
-Release:	2
+Version:	0.9.5
+Release:	1
 License:	MIT
 Group:		Libraries
 URL:		http://liboauth.sourceforge.net/
 Source0:	http://liboauth.sourceforge.net/pool/%{name}-%{version}.tar.gz
-# Source0-md5:	973ded7a1af348c5bfe4e3b6b7e47bd3
+# Source0-md5:	2a8e01914dc85f297ef69c1ab300d0ec
 BuildRequires:	curl-devel
 BuildRequires:	nss-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
