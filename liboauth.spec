@@ -1,12 +1,12 @@
 Summary:	OAuth library functions
 Summary(pl.UTF-8):	Biblioteka Funkcji OAuth
 Name:		liboauth
-Version:	0.9.6
+Version:	0.9.7
 Release:	1
 License:	MIT
 Group:		Libraries
 Source0:	http://liboauth.sourceforge.net/pool/%{name}-%{version}.tar.gz
-# Source0-md5:	508aa0df1e3065b2d7566d85013b2aca
+# Source0-md5:	103ea90e3330dfcda7b6d59c4c697472
 URL:		http://liboauth.sourceforge.net/
 BuildRequires:	curl-devel
 BuildRequires:	nss-devel
