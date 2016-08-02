@@ -5,7 +5,7 @@ Version:	1.0.3
 Release:	2
 License:	MIT
 Group:		Libraries
-Source0:	http://liboauth.sourceforge.net/pool/%{name}-%{version}.tar.gz
+Source0:	http://downloads.sourceforge.net/liboauth/%{name}-%{version}.tar.gz
 # Source0-md5:	689b46c2b3ab1a39735ac33f714c4f7f
 URL:		http://liboauth.sourceforge.net/
 BuildRequires:	curl-devel
